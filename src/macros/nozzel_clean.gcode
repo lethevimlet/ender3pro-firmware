@@ -5,8 +5,6 @@
 ; it also assumes that you can use firmware retraction with G10/G11 (otherwise add your own extruder commands in case)
 
 G0 F50000 ; set high speed
-G28;  home
-M104 S200 ; heat up
 G90 ; use absolute positioning
 G0 X200 Y0 Z20 ; move towards cleaning location, 20mm higher than bed
 G0 X220 F2500 ; slow down
@@ -36,83 +34,7 @@ G0 X+1 Z-5;
 G0 X-1 Z-5;
 G0 X+10 Z+10;
 
-; decrease 1 Z -> adjust here the starting point of the nozzle
-G0 Z-1;
-
-
-G0 F500 ; slow speed
-; regular routine
-; down
-G0 X-20 Z-1; 10 to 9 
-G0 X+20 Z-1; 8
-G0 X-20 Z-1; 7
-G0 X+20 Z-1; 6 
-G0 X-20 Z-1; 5
-G0 X+20 Z-1; 4 
-; a few extra runs
-G0 X-20;
-G0 X+20;
-G0 X-20;
-G0 X+20;
-G0 X-20;
-G0 X+20;
-;up
-G0 X-20 Z+1; 4 to 5
-G0 X+20 Z+1; 6
-G0 X-20 Z+1; 7 
-G0 X+20 Z+1; 8 
-G0 X-20 Z+1; 9 
-G0 X+20 Z+1; 10
-
-G0 F2500 ; medium speed
-
-; regular routine
-; down
-G0 X-20 Z-1; 10 to 9 
-G0 X+20 Z-1; 8
-G0 X-20 Z-1; 7
-G0 X+20 Z-1; 6 
-G0 X-20 Z-1; 5
-G0 X+20 Z-1; 4 
-; a few extra runs
-G0 X-20;
-G0 X+20;
-G0 X-20;
-G0 X+20;
-G0 X-20;
-G0 X+20;
-;up
-G0 X-20 Z+1; 4 to 5
-G0 X+20 Z+1; 6
-G0 X-20 Z+1; 7 
-G0 X+20 Z+1; 8 
-G0 X-20 Z+1; 9 
-G0 X+20 Z+1; 10
-
 G0 F5000 ; fast speed
-
-; regular routine
-; down
-G0 X-20 Z-1; 10 to 9 
-G0 X+20 Z-1; 8
-G0 X-20 Z-1; 7
-G0 X+20 Z-1; 6 
-G0 X-20 Z-1; 5
-G0 X+20 Z-1; 4 
-; a few extra runs
-G0 X-20;
-G0 X+20;
-G0 X-20;
-G0 X+20;
-G0 X-20;
-G0 X+20;
-;up
-G0 X-20 Z+1; 4 to 5
-G0 X+20 Z+1; 6
-G0 X-20 Z+1; 7 
-G0 X+20 Z+1; 8 
-G0 X-20 Z+1; 9 
-G0 X+20 Z+1; 10
 
 G0 Z+10;
 G90; back to absolute position
