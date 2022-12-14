@@ -22,3 +22,4 @@ https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3
 ### Other Important Stuff
 - PC12 is used for smart filament instead of PC15
 - S_CURVE_ACCELERATION makes quite and fast prints
+- Always use M502, M500 after flashing Marlin with new settings to ensure that the new values are saved to EEPROM.
