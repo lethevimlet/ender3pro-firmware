@@ -4,7 +4,7 @@ G28 ;Home
 G29 ;BLTouch
 G92 E0 ;Reset Extruder
 M109 S{material_print_temperature_layer_0} ;Finish heating the extruder to the g-code file specified print temperature
-@nozzel_clean
+@nozzle_clean
 G1 Z2.0 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed
 G1 X0.1 Y20 Z0.3 F5000.0 ; Move to start position
 G1 X0.1 Y200.0 Z0.3 F1500.0 E15 ; Draw the first line
